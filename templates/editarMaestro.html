@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edicion de maestro</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body id="body">
+    <div>
+        {% include '/plantillas/nav.html' %}
+    </div>
+
+
+    <div class="botns"></div>
+    <div class="Filtrado"></div>
+
+    <div class="add">
+        <form action="/updateMaestro/{{ maestro.0 }}" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" value="{{ maestro.1 }}">
+            <input type="text" name="apellidoP" placeholder="Apellido Paterno" value="{{ maestro.2 }}">
+            <input type="text" name="apellidoM" placeholder="Apellido Materno" value="{{ maestro.3 }}">
+            
+            <input type="text" name="rfid" placeholder="RFID" value="{{ maestro.5 }}">
+            <input type="text" name="correoT" placeholder="Correo" value="{{ maestro.6 }}">
+            <input type="text" name="pass" placeholder="password" value="{{ maestro.7 }}">
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+
+
+
+    <script src="{{ url_for('static', filename='js/homeMenuDesplegable.js') }}"></script>
+
+</body>
+</html>

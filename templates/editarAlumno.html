@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edicion de alumno</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body id="body">
+    <div>
+        {% include '/plantillas/nav.html' %}
+    </div>
+
+
+    <div class="botns"></div>
+    <div class="Filtrado"></div>
+
+    <div class="add">
+        <form action="/updateAlumno/{{ alumno.0 }}" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre" value="{{ alumno.1 }}">
+            <input type="text" name="apellidoP" placeholder="Apellido Paterno" value="{{ alumno.2 }}">
+            <input type="text" name="apellidoM" placeholder="Apellido Materno" value="{{ alumno.3 }}">
+            <input type="text" name="grupo" placeholder="Grado y Grupo" value="{{ alumno.4 }}">
+            <input type="text" name="rfid" placeholder="RFID" value="{{ alumno.5 }}">
+            <input type="text" name="correoT" placeholder="Correo del tutor" value="{{ alumno.6 }}">
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+
+
+
+    <script src="{{ url_for('static', filename='js/homeMenuDesplegable.js') }}"></script>
+
+</body>
+</html>

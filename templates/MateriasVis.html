@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materias</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body id="body">
+    <div>
+        {% include '/plantillas/nav.html' %}
+    </div>
+
+
+    <div class="botns"></div>
+    <div class="Filtrado"></div>
+
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Materias</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in materias %}
+                <tr>
+                    <td>{{ row[1] }}</td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <script src="{{ url_for('static', filename='js/homeMenuDesplegable.js') }}"></script>
+
+</body>
+</html>

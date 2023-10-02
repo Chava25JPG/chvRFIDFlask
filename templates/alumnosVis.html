@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registro de alumnos</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body id="body">
+    <div>
+        {% include '/plantillas/nav.html' %}
+    </div>
+
+    <div class="add">
+        <h2>Registra un nuevo alumno</h2>
+        <form action="/addAlum" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="apellidoP" placeholder="Apellido Paterno">
+            <input type="text" name="apellidoM" placeholder="Apellido Materno" >
+            
+            <input type="text" name="grupo" placeholder="Grado y Grupo" >
+            
+            <input type="text" name="rfid" placeholder="RFID">
+            <input type="text" name="correoT" placeholder="Correo del tutor" >
+            <button type="submit">Guardar</button>
+        </form>
+    </div>
+
+    <div class="botns"></div>
+    <div class="Filtrado"></div>
+
+    <div class="center-heading">
+        <table>
+            <h1>Registro de Alumnos</h1>
+            <thead>
+                
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Grupo</th>
+                    <th>Especialidad</th>
+                    <th>RFID</th>
+                    <th>Correo del tutor</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in alumnos %}
+                <tr>
+                    <td>{{ row[1] }}</td>
+                    <td>{{ row[2] }}</td>
+                    <td>{{ row[3] }}</td>
+                    <td>{{ row[4] }}</td>
+                    <td>{{ row[5] }}</td>
+                    <td>{{ row[6] }}</td>
+                    <td>{{ row[7] }}</td>
+                    <td>
+                        <a id="editar" href="/editAlum/ {{ row[0] }}">Editar</a>
+                        <a id="eliminar" href="/eliAlum/{{ row[0] }}">Eliminar</a>
+                        
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            
+        </table>
+    </div>
+
+
+
+
+    <script src="{{ url_for('static', filename='js/homeMenuDesplegable.js') }}"></script>
+
+</body>
+</html>

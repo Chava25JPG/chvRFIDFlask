@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='inicio.css') }}">
+  </head>
+  <body>
+    <div class="logo">
+      <span class="checkmark"></span>
+      <h2>InSchool</h2>
+    </div>
+    
+    <div class="fondo">
+      <div class="login-box">
+        <h2>Empecemos</h2>
+        <h6>Por Favor Inicia Sesion</h6>
+        <form method="POST" action="{{ url_for('login') }}">
+          <div class="user-box">
+            
+            <input type="text" name="username" required="" placeholder="Usuario">
+          
+          </div>
+          <div class="user-box">
+            <input type="password" name="password" required="" placeholder="Contraseña">
+          
+          </div>
+          <button type="submit">Siguiente</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

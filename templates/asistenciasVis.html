@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencias</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+
+</head>
+<body id="body">
+    <div>
+        {% include '/plantillas/nav.html' %}
+    </div>
+
+    <div class="botns"></div>
+    <div class="Filtrado"></div>
+    <div class="listaAsiTabla">
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre Del Alumno</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>Grupo</th>
+                    <th>Especialidad</th>
+                    <th>Materia</th>
+                    <th>Maestro</th>
+                    <th>Hora de entrada</th>
+                    <th>Fecha</th>
+                    <th>Asistio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for resultado in resultados %}
+                <tr>
+                    <td>{{ resultado[1] }}</td>
+                    <td>{{ resultado[2] }}</td>
+                    <td>{{ resultado[3] }}</td>
+                    <td>{{ resultado[4] }}</td>
+                    <td>{{ resultado[5] }}</td>
+                    <td>{{ resultado[6] }}</td>
+                    <td>{{ resultado[7] }}</td>
+                    <td>{{ resultado[8] }}</td>
+                    <td>{{ resultado[9] }}</td>
+                    <td>{{ resultado[10] }}</td>
+                    <td>
+                        
+                        <a id="eliminar" href="/eliAsi/{{ resultado[0] }}">Eliminar</a>
+                        
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    
+
+
+    <script src="{{ url_for('static', filename='js/homeMenuDesplegable.js') }}"></script>
+</body>
+</html>

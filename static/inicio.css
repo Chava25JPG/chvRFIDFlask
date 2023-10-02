@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f1f1f1;
+    background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23000000' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+  }
+  
+  .login-box {
+    width: 320px;
+    height: 420px;
+    border-radius: 15px;
+    background: #fff;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+    padding: 70px 30px;
+    font-family: "Cascadia Code", monospace;
+  }
+  
+  h2 {
+    font-family: "Cascadia Code", monospace;
+    margin: 0;
+    padding: 0 0 0px;
+    text-align: center;
+    font-size: 27px;
+  }
+
+
+  h6 {
+    font-family: "Cascadia Code", monospace;
+    margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 10px;
+    color: grey;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    color: #000000;
+  }
+  
+  .checkmark {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .checkmark::before {
+    content: '';
+    display: block;
+    position: relative;
+    left: 8px;
+    top: 3px;
+    width: 14px;
+    height: 24px;
+    border: solid;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+  
+  h1 {
+    font-family: "Cascadia Code", monospace;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  
+  .login-box input[type="text"],
+  .login-box input[type="password"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border:2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: #000;
+    border-radius: 24px;
+    transition: 0.25s;
+    font-family: "Cascadia Code", monospace;
+    }
+    
+    .login-box input[type="text"]:focus,
+    .login-box input[type="password"]:focus {
+    width: 280px;
+    border-color: #2ecc71;
+    font-family: "Cascadia Code", monospace;
+    }
+    
+    .login-box button[type="submit"] {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 50px auto;
+    text-align: center;
+    border: 1px solid #e0805a;
+    padding: 10px 30px;
+    outline: none;
+    color: #000;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-family: "Cascadia Code", monospace;
+    }
+    
+    .login-box button[type="submit"]:hover {
+    background: #e0805a;
+    font-family: "Cascadia Code", monospace;
+    }
+
+    
+  
